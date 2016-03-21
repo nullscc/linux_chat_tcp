@@ -1,0 +1,31 @@
+本程序实现一个简单的聊天室，包括以下功能：
+	注册、登录
+	群聊
+	查询在线人数
+	查询在线名单
+	私聊
+	帮助手册(需要将help文件放到服务器的/etc/chat/目录中)
+	服务端日志
+	离线消息(服务端)
+	
+编译：
+	chat目录已经单独分离出来了，在chat目录或char/src执行make,就会生成三个应用程序，testchat需要在src的Makefile文件中将ENABLE_TEST=1才会有效
+
+运行：
+本代码包括三个应用程序：
+	srvchat：服务端程序，运行在服务器端，也可以在本地测试
+	调用方式：
+		sudo ./srvchat <端口>
+
+	clichat：客户端程序，用户主要交互端
+	调用方式：
+		./clichat <IP地址> <端口>
+
+	testchat:测试程序，可指定建立多少个TCP连接，主要测试服务器的并发连接能力
+	调用方式：
+		./testchat <IP地址> <端口> <需要建立连接的数目>
+
+项目地址：git@github.com:nullscc/linux_chat_tcp.git
+	项目从git@github.com:nullscc/UNPCODE.git下的chat目录搬移过来的，如果想看log可以到git@github.com:nullscc/UNPCODE.git下载然后查看chat目录的log
+	
+	
